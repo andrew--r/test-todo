@@ -1,0 +1,49 @@
+.todo_app {
+	padding: 3rem;
+	font-family: Helvetica, Arial, sans-serif;
+	
+	&-title {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+
+	&-list {
+		padding: 1rem 0;
+	}
+
+	&-item {
+		display: flex;
+		align-items: center;
+		padding: .5rem 0;
+	}
+
+	&-save_item {
+		display: none;
+		
+		.todo_app-item_text:not([disabled]) + & {
+			display: inline-block;
+		}
+	}
+
+	&-toggle_item {
+		display: inline-block;
+		width: 1rem;
+		height: 1rem;
+		margin: 0;
+	}
+
+	&-item_text {
+		background: transparent;
+		border: 0;
+		margin: 0 .5rem;
+		
+		.todo_app-toggle_item:checked + & {
+			text-decoration: line-through;
+		}
+	}
+
+	&-controls {
+		padding-top: 1rem;
+	}
+}
+
